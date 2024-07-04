@@ -1,0 +1,76 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.col-1 {
+  width: calc(var(--base-width)*1);
+}
+.col-2 {
+  width: calc(var(--base-width)*2);
+}
+.col-3 {
+  width: calc(var(--base-width)*3);
+}
+.col-4 {
+  width: calc(var(--base-width)*4);
+}
+.col-5 {
+  width: calc(var(--base-width)*5);
+}
+.col-6 {
+  width: calc(var(--base-width)*6);
+}
+.col-7 {
+  width: calc(var(--base-width)*7);
+}
+.col-8 {
+  width: calc(var(--base-width)*8);
+}
+.col-9 {
+  width: calc(var(--base-width)*9);
+}
+.col-10 {
+  width: calc(var(--base-width)*10);
+}
+.col-11 {
+  width: calc(var(--base-width)*11);
+}
+.col-12 {
+  width: calc(var(--base-width)*12);
+}
