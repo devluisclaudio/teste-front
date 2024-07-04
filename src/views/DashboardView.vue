@@ -22,7 +22,6 @@
 import { useUserStore } from "@/stores/user";
 import { computed } from "vue";
 import { ref } from "vue";
-import petsApi from "@/services/pets";
 const store = useUserStore();
 
 const username = computed(() =>
@@ -30,5 +29,4 @@ const username = computed(() =>
 );
 
 const totalPetsUser = ref(0);
-petsApi.getCountMyPets().then(({ data }) => (totalPetsUser.value = data));
 </script>

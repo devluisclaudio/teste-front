@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: 'https://api.mypetsafe.com.br'
+    baseURL: 'http://localhost:3000'
 })
 
 api.interceptors.request.use(async function (config) {

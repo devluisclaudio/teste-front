@@ -7,7 +7,6 @@
             <v-col cols="4" sm="10" md="4">
               <v-card class="elevation-12">
                 <v-card-text>
-                  <v-img :src="logoName" class="img-login"></v-img>
                   <form @submit.prevent="isRegister ? register() : login()">
                     <v-text-field
                       v-model="email"
@@ -78,8 +77,6 @@ import { ref } from "vue";
 import { useUserStore } from "@/stores/user";
 import { jwtStore } from "@/stores/jwt";
 import authApi from "@/services/auth";
-import logoName from "@/assets/logo-name.svg";
-import backgrounLogo from "../assets/background-login.webp"
 
 const store = useUserStore();
 const storeJwt = jwtStore();

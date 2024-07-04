@@ -4,9 +4,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router'
-// import { jsPDF } from "jspdf";
-// import Vue3SimpleHtml2pdf from "vue3-simple-html2pdf";
+import router from '@/router'
 
 // Vuetify
 import 'vuetify/styles'
