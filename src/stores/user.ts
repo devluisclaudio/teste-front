@@ -4,8 +4,10 @@ import {validaJson , convertJson} from '@/services/validaJsonLocalStorage'
 
 type User = {
   id: number,
-  username: string,
+  name: string,
   email: string,
+  createdAt: string,
+  updatedAt: string,
 }
 
 export const useUserStore = defineStore('user', () => {

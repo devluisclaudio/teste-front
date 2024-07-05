@@ -72,7 +72,7 @@
 
 <script setup lang="ts">
 import router from "@/router";
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import { ref } from "vue";
 import { useUserStore } from "@/stores/user";
 import { jwtStore } from "@/stores/jwt";
@@ -104,9 +104,9 @@ const login = () => {
   overlay.value = true;
   authApi
     .login(email.value, password.value)
-    .then(({ data: { jwt, user } }) => {
+    .then(({ data: { token, user } }) => {
       store.setUser(user);
-      storeJwt.setJwt(jwt);
+      storeJwt.setJwt(token);
       router.push("dashboard");
     })
     .catch(() => {
@@ -119,9 +119,9 @@ const register = () => {
     overlay.value = true;
     authApi
       .register(username.value, email.value, password.value)
-      .then(({ data: { jwt, user } }) => {
+      .then(({ data: { token, user } }) => {
         store.setUser(user);
-        storeJwt.setJwt(jwt);
+        storeJwt.setJwt(token);
         isRegister.value = false;
         errorMessage.value = "";
         reset();
@@ -145,6 +145,8 @@ const toggleMessage = computed(() => {
     ? stateObj.value.register.message
     : stateObj.value.login.message;
 });
+
+watch(isRegister, () => reset())
 </script>
 
 <style lang="css" scoped>
@@ -152,7 +154,7 @@ const toggleMessage = computed(() => {
   color: red;
 }
 .body-login{
-  background: blue;
+  background: rgba(79, 209, 232, 0.587);
 }
 .img-login{
   height: 97px;

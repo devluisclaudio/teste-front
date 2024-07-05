@@ -19,11 +19,6 @@ export const jwtStore = defineStore('jwt', () => {
         localStorage.setItem(key, validaJson(value))
     }
 
-    // function refreshJwt() {
-    //     countRetest.value++
-    //     return api.get('auth/refreshJwt')
-    // }
-
     async function jwtLogout() {
         await setJwt('');
         localStorage.removeItem(key);
