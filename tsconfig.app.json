@@ -9,8 +9,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "*": [ "node_modules/*" ],
     },
-    "lib": ["esnext", "dom"]
   }
 }

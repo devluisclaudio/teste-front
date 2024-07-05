@@ -152,9 +152,7 @@ const toggleMessage = computed(() => {
   color: red;
 }
 .body-login{
-  background: url('../assets/background-login.webp');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: blue;
 }
 .img-login{
   height: 97px;
